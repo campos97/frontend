@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/tfg-node-backend/static/css/main.f6f66380.css",
+    "main.js": "/tfg-node-backend/static/js/main.ceb9dade.js",
+    "index.html": "/tfg-node-backend/index.html",
+    "main.f6f66380.css.map": "/tfg-node-backend/static/css/main.f6f66380.css.map",
+    "main.ceb9dade.js.map": "/tfg-node-backend/static/js/main.ceb9dade.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f6f66380.css",
+    "static/js/main.ceb9dade.js"
+  ]
+}
