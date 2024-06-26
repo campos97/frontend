@@ -1,0 +1,660 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat");
+
+:root {
+  --color-background-light: #ffffff;
+  --color-text-light: #000000;
+  --color-background-dark: #121212;
+  --color-text-dark: #e0e0e0;
+  --color-navbar-light: #f9f9f9;
+  --color-navbar-dark: #1f1f1f;
+  --color-wrap-light: #f9f9f9;
+  --color-wrap-dark: #2c2c2c;
+  --color-button-light: #4caf50;
+  --color-button-dark: #357a38;
+}
+
+/* COMÚN */
+* {
+  box-sizing: border-box;
+}
+
+#root {
+  background-color: var(--color-background-light);
+  color: var(--color-text-light);
+}
+
+.theme--dark #root {
+  background-color: var(--color-background-dark);
+  color: var(--color-text-dark);
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.wrap {
+  background-color: var(--color-wrap-light);
+  border-radius: 1rem;
+  padding: 1rem;
+  margin: 0.5rem;
+  width: auto;
+  box-shadow: 0.5rem 0.5rem 0.5rem 0.5rem #ccc;
+}
+
+.theme--dark .wrap {
+  background-color: var(--color-wrap-dark);
+}
+
+.error-message {
+  color: red;
+}
+
+/**/
+
+#part1 {
+  display: flex;
+}
+
+#part2 {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  font-family: Arial, sans-serif;
+}
+
+.dashboard-view {
+  display: flex;
+  flex-direction: column;
+  font-size: 1.2rem;
+  height: 3rem;
+  width: 100%;
+  border-radius: 0.5rem;
+}
+
+.route {
+  background-color: whitesmoke;
+  border-radius: 1rem;
+  padding: 1rem;
+  margin: 0.5rem;
+  width: 100%;
+  box-shadow: 0.5rem 0.5rem 0.5rem 0.5rem #ccc;
+}
+
+.theme--dark .route {
+  background-color: var(--color-background-dark);
+}
+
+/* NAVBAR */
+.nav-bar {
+  display: flex;
+  flex-direction: column;
+  padding: 0 20px;
+  background-color: var(--color-navbar-light);
+  font-size: 1.2rem;
+  height: 100vh;
+  width: auto;
+}
+
+.theme--dark .nav-bar {
+  background-color: var(--color-navbar-dark);
+}
+
+.nav-bar nav ul {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.nav-bar nav ul li {
+  padding: 1rem;
+  display: flex;
+  justify-content: flex-start;
+  text-align: center;
+  border-left: 1px solid #ccc;
+}
+
+.nav-bar nav ul li:hover {
+  background-color: #003366;
+}
+
+.nav-bar nav ul li a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Theme Toggle */
+.theme-toggle {
+  cursor: pointer;
+  padding: 10px;
+  background-color: var(--color-wrap-light);
+  border: 1px solid var(--color-text-light);
+  border-radius: 5px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.theme--dark .theme-toggle {
+  background-color: var(--color-wrap-dark);
+  color: var(--color-text-dark);
+  border: 1px solid var(--color-text-dark);
+}
+
+/* LOGIN */
+.login-view {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  background-color: var(--color-background-light);
+  color: var(--color-text-light);
+}
+
+.theme--dark .login-view {
+  background-color: var(--color-background-dark);
+  color: var(--color-text-dark);
+}
+
+.login-input {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+.login-input:focus {
+  border-color: #888;
+  outline: none;
+}
+
+.login-btn {
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.login-btn:hover {
+  background-color: #0056b3;
+}
+
+/* EMPLEADOS */
+.department-list h2 {
+  text-align: center;
+}
+
+.department-ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.department-btn {
+  padding: 8px;
+  margin-bottom: 7px;
+  background-color: var(--color-button-light);
+  border-radius: 1rem;
+  box-shadow: 0.5rem 0.5rem 0.5rem 0.5rem #ccc;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+.theme--dark .department-btn {
+  background-color: var(--color-button-dark);
+}
+
+/* DASHBOARD */
+.employee-adverts {
+  background-color: whitesmoke;
+  border-radius: 1rem;
+  padding: 1rem;
+  margin: 0.5rem;
+  width: auto;
+  box-shadow: 0.5rem 0.5rem 0.5rem 0.5rem #ccc;
+}
+
+.employee-hourgrid {
+  background-color: whitesmoke;
+  border-radius: 1rem;
+  padding: 1rem;
+  margin: 0.5rem;
+  width: auto;
+  box-shadow: 0.5rem 0.5rem 0.5rem 0.5rem #ccc;
+}
+
+.theme--dark .employee-adverts,
+.theme--dark .employee-hourgrid {
+  background-color: var(--color-wrap-dark);
+  color: var(--color-text-dark);
+}
+
+/* CONFIG */
+.file-input {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.config-options {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.config-options h2 {
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.config-options ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.config-options ul li {
+  margin-bottom: 15px;
+}
+
+.config-options p {
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.config-options input[type="file"] {
+  margin-bottom: 10px;
+}
+
+.config-options input[type="password"] {
+  display: block;
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+
+.config-options button {
+  padding: 8px 16px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.config-options button:hover {
+  background-color: #0056b3;
+}
+
+.config-options img {
+  max-width: 100%;
+  margin-bottom: 10px;
+}
+
+/* Fichaje */
+h1 {
+  font-size: 28px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Estilos para el contenedor del formulario de entrada */
+
+/* Estilos para el botón de registrar entrada */
+.registry-btn {
+  padding: 8px 16px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.registry-btn:hover {
+  background-color: #0056b3;
+}
+
+/* Request */
+.request-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.request-form button {
+  padding: 8px 16px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.request-form button:hover {
+  background-color: #0056b3;
+}
+
+.request-form input {
+  display: block;
+  width: 40%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.request-form textarea {
+  display: block;
+  width: 40%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.request-form select {
+  display: block;
+  width: 40%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.request-form label {
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+/* EMPLEADOS */
+.advise-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.advise-form button {
+  padding: 8px 16px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.advise-form button:hover {
+  background-color: #0056b3;
+}
+
+.advise-form input {
+  display: block;
+  width: 40%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.advise-form textarea {
+  display: block;
+  width: 40%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+/* EmployeeCard */
+
+/* Employee Card */
+h3 {
+  margin: 10px 0;
+}
+
+h6 {
+  margin: 5px 0;
+  text-transform: uppercase;
+}
+
+p {
+  font-size: 14px;
+  line-height: 21px;
+}
+
+.employee-card {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  justify-content: center;
+  padding: 2rem;
+}
+.card-container {
+  background-color: #231e39;
+  border-radius: 5px;
+  box-shadow: 0px 10px 20px -10px rgba(0, 0, 0, 0.75);
+  color: #b3b8cd;
+  padding-top: 30px;
+  position: relative;
+  width: 350px;
+  max-width: 100%;
+  text-align: center;
+}
+
+.card-container .pro {
+  color: #231e39;
+  background-color: #febb0b;
+  border-radius: 3px;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 3px 7px;
+  position: absolute;
+  top: 30px;
+  left: 30px;
+}
+
+.card-container .close {
+  color: #231e39;
+  background-color: #f85b5b;
+  border-radius: 3px;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 3px 7px;
+  position: absolute;
+  top: 30px;
+  right: 30px;
+}
+
+.card-container .delete {
+  color: #231e39;
+  background-color: #f85b5b;
+  border-radius: 3px;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 3px 7px;
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+.close-button {
+  background-color: #f85b5b00;
+  border: none;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.delete-employee-button{
+  background-color: #f85b5b00;
+  border: none;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.card-container .close:hover {
+  background-color: #ff0000;
+  cursor: pointer;
+}
+
+.round {
+  border: 1px solid #03bfcb;
+  border-radius: 50%;
+  padding: 7px;
+  height: 10rem;
+  width: 10rem;
+}
+
+button.primary {
+  background-color: #03bfcb;
+  border: 1px solid #03bfcb;
+  border-radius: 3px;
+  color: #231e39;
+  font-family: Montserrat, sans-serif;
+  font-weight: 500;
+  padding: 10px 25px;
+}
+
+button.primary.ghost {
+  background-color: transparent;
+  color: #02899c;
+}
+
+.skills {
+  background-color: #1f1a36;
+  text-align: left;
+  padding: 15px;
+  margin-top: 30px;
+}
+
+.skills ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.skills ul li {
+  border: 1px solid #2d2747;
+  border-radius: 2px;
+  display: inline-block;
+  font-size: 12px;
+  margin: 0 7px 7px 0;
+  padding: 7px;
+}
+
+/* Employee List */
+
+.employee-list ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+
+.employee-list button {
+  background-color: rgb(0, 8, 82);
+  color: white;
+  border-radius: 1rem;
+  padding: 1rem;
+  margin: 0.5rem;
+  width: auto;
+  box-shadow: 0.5rem 0.5rem 0.5rem 0.5rem #ccc;
+  height: 10rem;
+  width: 10rem;
+}
+
+.employee-list button:hover {
+  background-color: #0056b3;
+}
+
+/*userbar*/
+
+.user-bar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0 20px;
+  background-color: #002b53;
+  color: white;
+  font-size: 1.2rem;
+  height: 6rem;
+  width: 100%;
+}
+
+.user-bar nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  width: 100%;
+}
+
+.user-bar nav ul {
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
+}
+
+.profile-pic {
+  border: 1px solid #03bfcb;
+  border-radius: 50%;
+  height: 5rem;
+  width: 5rem;
+}
+
+.logo {
+  padding: 1rem;
+  height: 6rem;
+  width: 6rem;
+}
+
