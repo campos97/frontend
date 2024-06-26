@@ -22,10 +22,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
   },
-  "homepage": "http://campos97.github.io/tfg-node-backend",
   "eslintConfig": {
     "extends": [
       "react-app",
